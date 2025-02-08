@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <link rel="shortcut icon" href="your_valid_favicon_url" type="image/x-icon">
+    <style>
+        .container {
+            margin: 10px auto;
+            padding: 10px;
+            background-color: aquamarine;
+            height: 400px;
+            width: 400px;
+            position: relative;
+            overflow: hidden; /* Add this if you want to clip the box within the container */
+        }
+        body {
+            background-color: black;
+        }
+        .box {
+            background-color: azure;
+            margin: 8px;
+            padding: 8px;
+            height: 100px;
+            width: 100px;
+            display: flex;
+            animation-name: ishant;
+            animation-duration: 2s;
+            animation-iteration-count:calc(3); /* if you want it to repeat */
+            justify-content: center;
+        }
+        @keyframes ishant {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(150px, 150px) rotate(90deg) scale(0.75); }
+            100% { transform: translate(0, 0) rotate(180deg)  }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
